@@ -1,0 +1,14 @@
+{
+  "projects": {
+    "default": "stitch-pix"
+  },
+  "targets": {
+    "stitch-pix": {
+      "hosting": {
+        "app": [
+          "stitch-pix"
+        ]
+      }
+    }
+  }
+}

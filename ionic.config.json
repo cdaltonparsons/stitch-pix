@@ -1,5 +1,7 @@
 {
   "name": "stitch-pix-app",
-  "integrations": {},
+  "integrations": {
+    "capacitor": {}
+  },
   "type": "angular"
 }
