@@ -40,25 +40,24 @@ export class HomePage {
   }
 
   async saveMeasurements() {
-    console.log(this.segment);
-    // const loader = await this.loadingCtrl.create();
-    // await loader.present();
+    const loader = await this.loadingCtrl.create();
+    await loader.present();
 
-    // this.dataService.addMeasurementsShopper(this.shopperForm.value).then(
-    //   (result) => {
-    //     loader.dismiss();
-    //     this.router.navigate(['/tabs/explore']);
-    //   },
-    //   async (err) => {
-    //     loader.dismiss();
-    //     const alert = await this.alertCtrl.create({
-    //       header: 'Woops!',
-    //       message: err.message,
-    //       buttons: ['OK'],
-    //     });
+    this.dataService.addMeasurementsShopper(this.shopperForm.value).then(
+      (result) => {
+        loader.dismiss();
+        this.router.navigate(['/tabs/explore']);
+      },
+      async (err) => {
+        loader.dismiss();
+        const alert = await this.alertCtrl.create({
+          header: 'Woops!',
+          message: err.message,
+          buttons: ['OK'],
+        });
 
-    //     await alert.present();
-    //   }
-    // );
+        await alert.present();
+      }
+    );
   }
 }
