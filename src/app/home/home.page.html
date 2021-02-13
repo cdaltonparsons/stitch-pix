@@ -3,7 +3,7 @@
     <ion-title>Home</ion-title>
     <ion-buttons slot="end">
       <ion-button (click)="signOut()">
-        <ion-icon slot="icon-only" name="log-out"></ion-icon>
+        Log Out
       </ion-button>
     </ion-buttons>
   </ion-toolbar>
@@ -105,8 +105,8 @@
                         </ion-row>
                       </ion-grid>
                     </ion-item>
-                    <ion-button expand="block" size="small" click="saveMeasurements()">Submit</ion-button>
                   </form>
+                  <ion-button expand="block" size="small" (click)="saveMeasurements()">Submit</ion-button>
                 </ion-grid>
               </ion-card-content>
             </ion-card>
