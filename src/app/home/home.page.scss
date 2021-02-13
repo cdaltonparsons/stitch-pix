@@ -1,9 +1,18 @@
 .background {
   background-image: url("../../assets/icon/fashion-model.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 100%;
 }
 
 ion-card {
   background: rgba(148, 124, 176, 0.5);
+  margin-top: 30%;
+  height: 75%;
+}
+
+form {
+  opacity: 0.8;
 }
 
 .light {
