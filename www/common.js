@@ -168,11 +168,8 @@ let DataService = class DataService {
             this.currentUser = user;
         });
     }
-    addMeasurementsShopper(measurements) {
-        return this.afs.collection('shopperMeasurements').add(measurements);
-    }
-    addMeasurementsModel(measurements) {
-        return this.afs.collection('modelMeasurements').add(measurements);
+    addMeasurements(measurements) {
+        return this.afs.collection('measurements').add(measurements);
     }
     signUp({ email, password }) {
         return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, function* () {

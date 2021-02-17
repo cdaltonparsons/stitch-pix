@@ -7,16 +7,6 @@
       </ion-button>
     </ion-buttons>
   </ion-toolbar>
-  <ion-toolbar color="secondary">
-    <ion-segment [(ngModel)]="segment">
-      <ion-segment-button value="shopper">
-        <ion-label>Shoppers</ion-label>
-      </ion-segment-button>
-      <ion-segment-button value="model">
-        <ion-label>Models</ion-label>
-      </ion-segment-button>
-    </ion-segment>
-  </ion-toolbar>
 </ion-header>
 
 <ion-content>
@@ -31,56 +21,28 @@
               </ion-card-header>
               <ion-card-content class="ion-text-center">
                 <ion-grid>
-                  <div [ngSwitch]="segment">
-                    <div *ngSwitchCase="'shopper'">
-                      <ion-row class="ion-align-items-start">
-                        <ion-col>
-                          <ion-text color="light">We're here to help women find fashion that looks great on their
-                            body
-                            type!
-                          </ion-text>
-                        </ion-col>
-                      </ion-row>
-                      <ion-row class="ion-align-items-start">
-                        <ion-col>
-                          <ion-text color="light">Input your information below to see real women with your
-                            measurements wearing
-                            clothes you'll look great in!</ion-text>
-                        </ion-col>
-                      </ion-row>
-                      <ion-row class="ion-align-items-start">
-                        <ion-col>
-                          <ion-text color="light">Don't worry--our lips are sealed!</ion-text>
-                        </ion-col>
-                      </ion-row>
-                    </div>
-                  </div>
-                  <div [ngSwitch]="segment">
-                    <div *ngSwitchCase="'model'">
-                      <ion-row>
-                        <ion-col>
-                          <ion-text class="light">We're here to help women find fashion that looks great on their
-                            body
-                            type!
-                          </ion-text>
-                        </ion-col>
-                      </ion-row>
-                      <ion-row>
-                        <ion-col>
-                          <ion-text class="light">Input your information below so real women with your measurements
-                            can
-                            see your style!
-                          </ion-text>
-                        </ion-col>
-                      </ion-row>
-                      <ion-row>
-                        <ion-col>
-                          <ion-text class="light">We're all about body positivity here!</ion-text>
-                        </ion-col>
-                      </ion-row>
-                    </div>
-                  </div>
-                  <div >
+
+                  <ion-row class="ion-align-items-start">
+                    <ion-col>
+                      <ion-text color="light">We're here to help women find fashion that looks great on their
+                        body
+                        type!
+                      </ion-text>
+                    </ion-col>
+                  </ion-row>
+                  <ion-row class="ion-align-items-start">
+                    <ion-col>
+                      <ion-text color="light">Input your information below to see real women with your
+                        measurements wearing
+                        clothes you'll look great in!</ion-text>
+                    </ion-col>
+                  </ion-row>
+                  <ion-row class="ion-align-items-start">
+                    <ion-col>
+                      <ion-text color="light">Don't worry--our lips are sealed!</ion-text>
+                    </ion-col>
+                  </ion-row>
+                  <div>
                     <form [formGroup]="measurementsForm">
                       <ion-item>
                         <ion-input formControlName="hips" placeholder="Hip Measurement" type="number"></ion-input>
@@ -106,8 +68,35 @@
                           </ion-row>
                         </ion-grid>
                       </ion-item>
+                      <ion-item>
+                        <ion-grid>
+                          <ion-list>
+                            <ion-radio-group formControlName="userType">
+                              <ion-list-header>I am a...</ion-list-header>
+                              <ion-row>
+                                <ion-col size="6">
+                                  <ion-item>
+                                    <ion-label>Shopper</ion-label>
+                                    <ion-radio slot="start" color="secondary" value="shopper"></ion-radio>
+                                  </ion-item>
+                                </ion-col>
+                                <ion-col size="6">
+                                  <ion-item>
+                                    <ion-label>Model</ion-label>
+                                    <ion-radio slot="start" color="secondary" value="model"></ion-radio>
+                                  </ion-item>
+                                </ion-col>
+                              </ion-row>
+                            </ion-radio-group>
+                          </ion-list>
+                        </ion-grid>
+                      </ion-item>
                     </form>
-                    <ion-button expand="block" size="small" (click)="saveMeasurements()">Submit</ion-button>
+                    <ion-button [disabled]="!measurementsForm.valid" expand="block" size="small"
+                      (click)="saveMeasurements()">Submit</ion-button>
+                    <ion-text color="light" *ngIf="!measurementsForm.valid && measurementsForm.touched">All fields are
+                      required
+                    </ion-text>
                   </div>
                 </ion-grid>
               </ion-card-content>

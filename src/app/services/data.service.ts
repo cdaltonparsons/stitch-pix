@@ -34,12 +34,8 @@ export class DataService {
     });
   }
 
-  addMeasurementsShopper(measurements: Measurements) {
-    return this.afs.collection('shopperMeasurements').add(measurements);
-  }
-
-  addMeasurementsModel(measurements: Measurements) {
-    return this.afs.collection('modelMeasurements').add(measurements);
+  addMeasurements(measurements: Measurements) {
+    return this.afs.collection('measurements').add(measurements);
   }
 
   async signUp({ email, password }) {
@@ -61,7 +57,7 @@ export class DataService {
   }
 
   googleLogin() {
-   return this.afAuth.signInWithPopup(this.provider).then((result) => {
+    return this.afAuth.signInWithPopup(this.provider).then((result) => {
       let credential = result.credential;
       console.log(credential);
     });

@@ -30,6 +30,7 @@ export class HomePage {
       chest: ['', Validators.required],
       feet: ['', Validators.required],
       inches: ['', Validators.required],
+      userType: ['', Validators.required],
       userId: [this.currentUser.uid],
     });
   }
@@ -43,8 +44,7 @@ export class HomePage {
     const loader = await this.loadingCtrl.create();
     await loader.present();
 
-    if (this.segment == 'shopper') {
-      this.dataService.addMeasurementsShopper(this.measurementsForm.value).then(
+      this.dataService.addMeasurements(this.measurementsForm.value).then(
         async (result) => {
           loader.dismiss();
           const alert = await this.alertCtrl.create({
@@ -69,33 +69,5 @@ export class HomePage {
           await alert.present();
         }
       );
-    }
-    if (this.segment == 'model') {
-      this.dataService.addMeasurementsModel(this.measurementsForm.value).then(
-        async (result) => {
-          loader.dismiss();
-          const alert = await this.alertCtrl.create({
-            header: 'Thank You!',
-            message: `Now hit that + below to start creating!`,
-            buttons: ['OK'],
-          });
-          alert.onDidDismiss().then((data) => {
-            this.router.navigate(['/tabs/add-photo']);
-          });
-
-          await alert.present();
-        },
-        async (err) => {
-          loader.dismiss();
-          const alert = await this.alertCtrl.create({
-            header: 'Woops!',
-            message: err.message,
-            buttons: ['OK'],
-          });
-
-          await alert.present();
-        }
-      );
-    }
   }
 }

@@ -46,7 +46,7 @@ HomePageRoutingModule = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<ion-header>\n  <ion-toolbar color=\"secondary\">\n    <ion-title>Home</ion-title>\n    <ion-buttons slot=\"end\">\n      <ion-button (click)=\"signOut()\">\n        Log Out\n      </ion-button>\n    </ion-buttons>\n  </ion-toolbar>\n  <ion-toolbar color=\"secondary\">\n    <ion-segment [(ngModel)]=\"segment\">\n      <ion-segment-button value=\"shopper\">\n        <ion-label>Shoppers</ion-label>\n      </ion-segment-button>\n      <ion-segment-button value=\"model\">\n        <ion-label>Models</ion-label>\n      </ion-segment-button>\n    </ion-segment>\n  </ion-toolbar>\n</ion-header>\n\n<ion-content>\n  <div class=\"background\">\n    <ng-container *ngIf=\"measurementsForm\">\n      <ion-grid>\n        <ion-row class=\"ion-align-items-start\">\n          <ion-col size-lg=\"4\" offset-lg=\"4\">\n            <ion-card>\n              <ion-card-header class=\"ion-text-center\">\n                <ion-card-title class=\"light\">Hold Up!</ion-card-title>\n              </ion-card-header>\n              <ion-card-content class=\"ion-text-center\">\n                <ion-grid>\n                  <div [ngSwitch]=\"segment\">\n                    <div *ngSwitchCase=\"'shopper'\">\n                      <ion-row class=\"ion-align-items-start\">\n                        <ion-col>\n                          <ion-text color=\"light\">We're here to help women find fashion that looks great on their\n                            body\n                            type!\n                          </ion-text>\n                        </ion-col>\n                      </ion-row>\n                      <ion-row class=\"ion-align-items-start\">\n                        <ion-col>\n                          <ion-text color=\"light\">Input your information below to see real women with your\n                            measurements wearing\n                            clothes you'll look great in!</ion-text>\n                        </ion-col>\n                      </ion-row>\n                      <ion-row class=\"ion-align-items-start\">\n                        <ion-col>\n                          <ion-text color=\"light\">Don't worry--our lips are sealed!</ion-text>\n                        </ion-col>\n                      </ion-row>\n                    </div>\n                  </div>\n                  <div [ngSwitch]=\"segment\">\n                    <div *ngSwitchCase=\"'model'\">\n                      <ion-row>\n                        <ion-col>\n                          <ion-text class=\"light\">We're here to help women find fashion that looks great on their\n                            body\n                            type!\n                          </ion-text>\n                        </ion-col>\n                      </ion-row>\n                      <ion-row>\n                        <ion-col>\n                          <ion-text class=\"light\">Input your information below so real women with your measurements\n                            can\n                            see your style!\n                          </ion-text>\n                        </ion-col>\n                      </ion-row>\n                      <ion-row>\n                        <ion-col>\n                          <ion-text class=\"light\">We're all about body positivity here!</ion-text>\n                        </ion-col>\n                      </ion-row>\n                    </div>\n                  </div>\n                  <div >\n                    <form [formGroup]=\"measurementsForm\">\n                      <ion-item>\n                        <ion-input formControlName=\"hips\" placeholder=\"Hip Measurement\" type=\"number\"></ion-input>\n                      </ion-item>\n                      <ion-item>\n                        <ion-input formControlName=\"waist\" placeholder=\"Waist Measurement\" type=\"number\"></ion-input>\n                      </ion-item>\n                      <ion-item>\n                        <ion-input formControlName=\"chest\" placeholder=\"Chest Measurement\" type=\"number\"></ion-input>\n                      </ion-item>\n                      <ion-item>\n                        <ion-grid>\n                          <ion-row>\n                            <ion-label position=\"floating\">Height</ion-label>\n                          </ion-row>\n                          <ion-row>\n                            <ion-col>\n                              <ion-input formControlName=\"feet\" type=\"number\" placeholder=\"feet\"></ion-input>\n                            </ion-col>\n                            <ion-col>\n                              <ion-input formControlName=\"inches\" type=\"number\" placeholder=\"inches\"></ion-input>\n                            </ion-col>\n                          </ion-row>\n                        </ion-grid>\n                      </ion-item>\n                    </form>\n                    <ion-button expand=\"block\" size=\"small\" (click)=\"saveMeasurements()\">Submit</ion-button>\n                  </div>\n                </ion-grid>\n              </ion-card-content>\n            </ion-card>\n          </ion-col>\n        </ion-row>\n      </ion-grid>\n    </ng-container>\n  </div>\n</ion-content>\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<ion-header>\n  <ion-toolbar color=\"secondary\">\n    <ion-title>Home</ion-title>\n    <ion-buttons slot=\"end\">\n      <ion-button (click)=\"signOut()\">\n        Log Out\n      </ion-button>\n    </ion-buttons>\n  </ion-toolbar>\n</ion-header>\n\n<ion-content>\n  <div class=\"background\">\n    <ng-container *ngIf=\"measurementsForm\">\n      <ion-grid>\n        <ion-row class=\"ion-align-items-start\">\n          <ion-col size-lg=\"4\" offset-lg=\"4\">\n            <ion-card>\n              <ion-card-header class=\"ion-text-center\">\n                <ion-card-title class=\"light\">Hold Up!</ion-card-title>\n              </ion-card-header>\n              <ion-card-content class=\"ion-text-center\">\n                <ion-grid>\n\n                  <ion-row class=\"ion-align-items-start\">\n                    <ion-col>\n                      <ion-text color=\"light\">We're here to help women find fashion that looks great on their\n                        body\n                        type!\n                      </ion-text>\n                    </ion-col>\n                  </ion-row>\n                  <ion-row class=\"ion-align-items-start\">\n                    <ion-col>\n                      <ion-text color=\"light\">Input your information below to see real women with your\n                        measurements wearing\n                        clothes you'll look great in!</ion-text>\n                    </ion-col>\n                  </ion-row>\n                  <ion-row class=\"ion-align-items-start\">\n                    <ion-col>\n                      <ion-text color=\"light\">Don't worry--our lips are sealed!</ion-text>\n                    </ion-col>\n                  </ion-row>\n                  <div>\n                    <form [formGroup]=\"measurementsForm\">\n                      <ion-item>\n                        <ion-input formControlName=\"hips\" placeholder=\"Hip Measurement\" type=\"number\"></ion-input>\n                      </ion-item>\n                      <ion-item>\n                        <ion-input formControlName=\"waist\" placeholder=\"Waist Measurement\" type=\"number\"></ion-input>\n                      </ion-item>\n                      <ion-item>\n                        <ion-input formControlName=\"chest\" placeholder=\"Chest Measurement\" type=\"number\"></ion-input>\n                      </ion-item>\n                      <ion-item>\n                        <ion-grid>\n                          <ion-row>\n                            <ion-label position=\"floating\">Height</ion-label>\n                          </ion-row>\n                          <ion-row>\n                            <ion-col>\n                              <ion-input formControlName=\"feet\" type=\"number\" placeholder=\"feet\"></ion-input>\n                            </ion-col>\n                            <ion-col>\n                              <ion-input formControlName=\"inches\" type=\"number\" placeholder=\"inches\"></ion-input>\n                            </ion-col>\n                          </ion-row>\n                        </ion-grid>\n                      </ion-item>\n                      <ion-item>\n                        <ion-grid>\n                          <ion-list>\n                            <ion-radio-group formControlName=\"userType\">\n                              <ion-list-header>I am a...</ion-list-header>\n                              <ion-row>\n                                <ion-col size=\"6\">\n                                  <ion-item>\n                                    <ion-label>Shopper</ion-label>\n                                    <ion-radio slot=\"start\" color=\"secondary\" value=\"shopper\"></ion-radio>\n                                  </ion-item>\n                                </ion-col>\n                                <ion-col size=\"6\">\n                                  <ion-item>\n                                    <ion-label>Model</ion-label>\n                                    <ion-radio slot=\"start\" color=\"secondary\" value=\"model\"></ion-radio>\n                                  </ion-item>\n                                </ion-col>\n                              </ion-row>\n                            </ion-radio-group>\n                          </ion-list>\n                        </ion-grid>\n                      </ion-item>\n                    </form>\n                    <ion-button [disabled]=\"!measurementsForm.valid\" expand=\"block\" size=\"small\"\n                      (click)=\"saveMeasurements()\">Submit</ion-button>\n                    <ion-text color=\"light\" *ngIf=\"!measurementsForm.valid && measurementsForm.touched\">All fields are\n                      required\n                    </ion-text>\n                  </div>\n                </ion-grid>\n              </ion-card-content>\n            </ion-card>\n          </ion-col>\n        </ion-row>\n      </ion-grid>\n    </ng-container>\n  </div>\n</ion-content>\n");
 
 /***/ }),
 
@@ -149,6 +149,7 @@ let HomePage = class HomePage {
             chest: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_5__["Validators"].required],
             feet: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_5__["Validators"].required],
             inches: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_5__["Validators"].required],
+            userType: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_5__["Validators"].required],
             userId: [this.currentUser.uid],
         });
     }
@@ -160,50 +161,26 @@ let HomePage = class HomePage {
         return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, function* () {
             const loader = yield this.loadingCtrl.create();
             yield loader.present();
-            if (this.segment == 'shopper') {
-                this.dataService.addMeasurementsShopper(this.measurementsForm.value).then((result) => Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, function* () {
-                    loader.dismiss();
-                    const alert = yield this.alertCtrl.create({
-                        header: 'Thank You!',
-                        message: `Our company is just launching and it looks like we don't have your exact fit right now.  Check back soon!`,
-                        buttons: ['OK'],
-                    });
-                    alert.onDidDismiss().then((data) => {
-                        this.router.navigate(['/tabs/explore']);
-                    });
-                    yield alert.present();
-                }), (err) => Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, function* () {
-                    loader.dismiss();
-                    const alert = yield this.alertCtrl.create({
-                        header: 'Woops!',
-                        message: err.message,
-                        buttons: ['OK'],
-                    });
-                    yield alert.present();
-                }));
-            }
-            if (this.segment == 'model') {
-                this.dataService.addMeasurementsModel(this.measurementsForm.value).then((result) => Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, function* () {
-                    loader.dismiss();
-                    const alert = yield this.alertCtrl.create({
-                        header: 'Thank You!',
-                        message: `Now hit that + below to start creating!`,
-                        buttons: ['OK'],
-                    });
-                    alert.onDidDismiss().then((data) => {
-                        this.router.navigate(['/tabs/add-photo']);
-                    });
-                    yield alert.present();
-                }), (err) => Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, function* () {
-                    loader.dismiss();
-                    const alert = yield this.alertCtrl.create({
-                        header: 'Woops!',
-                        message: err.message,
-                        buttons: ['OK'],
-                    });
-                    yield alert.present();
-                }));
-            }
+            this.dataService.addMeasurements(this.measurementsForm.value).then((result) => Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, function* () {
+                loader.dismiss();
+                const alert = yield this.alertCtrl.create({
+                    header: 'Thank You!',
+                    message: `Our company is just launching and it looks like we don't have your exact fit right now.  Check back soon!`,
+                    buttons: ['OK'],
+                });
+                alert.onDidDismiss().then((data) => {
+                    this.router.navigate(['/tabs/explore']);
+                });
+                yield alert.present();
+            }), (err) => Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, function* () {
+                loader.dismiss();
+                const alert = yield this.alertCtrl.create({
+                    header: 'Woops!',
+                    message: err.message,
+                    buttons: ['OK'],
+                });
+                yield alert.present();
+            }));
         });
     }
 };
