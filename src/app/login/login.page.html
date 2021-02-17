@@ -1,55 +1,57 @@
 <ion-content>
   <ion-grid>
-    <div class="main-content">
-      <ion-row class="ion-justify-content-center">
-        <ion-img class="logo" src="./assets/icon/logo.png"></ion-img>
-      </ion-row>
-      <ion-row>
-        <ion-col class="ion-align-self-center">
-          <h1 class="ion-text-center"><strong>Welcome to StitchPix</strong></h1>
-        </ion-col>
-      </ion-row>
-      <ion-row class="ion-justify-content-center">
-        <ion-col class="ion-align-self-center">
-          <h4 class="ion-text-center">Stich Pix helps you find fashion that looks good on your body</h4>
-        </ion-col>
-      </ion-row>
-      <ion-row>
-        <ion-col>
-          <ion-button (click)="googleLogin()" expand="block" color="secondary">
-            Log In With Google
-          </ion-button>
-        </ion-col>
-      </ion-row>
-      <ion-row class="ion-justify-content-center">
-        <ion-col class="ion-align-self-center">
-          <form [formGroup]="credentialForm">
-            <ion-item>
-              <ion-input placeholder="Email address" formControlName="email" autofocus="true" clearInput="true">
-              </ion-input>
-            </ion-item>
-
-            <div *ngIf="(email.dirty || email.touched) && email.errors" class="errors">
-              <span *ngIf="email.errors?.required">Email is required</span>
-              <span *ngIf="email.errors?.email">Email is invalid</span>
-            </div>
-
-            <ion-item>
-              <ion-input placeholder="password" type="password" formControlName="password" clearInput="true">
-              </ion-input>
-            </ion-item>
-
-            <div *ngIf="(password.dirty || password.touched) && password.errors" class="errors">
-              <span *ngIf="password.errors?.required">Password is required</span>
-              <span *ngIf="password.errors?.minLength">Password must be at least 6 characters</span>
-            </div>
-
-            <ion-button (click)='signIn()' expand="full" size="small">Sign In</ion-button>
-          </form>
-        </ion-col>
-      </ion-row>
-      <ion-text class="ion-text-center">Don't have an account? <a routerLink="/signup">Sign up</a></ion-text>
-
+    <div id="bg">
+      <img src="../../assets/icon/fashion-model.jpg">
     </div>
+      <div class="main-content">
+        <ion-row class="ion-justify-content-center">
+          <ion-img class="logo" src="./assets/icon/logo.png"></ion-img>
+        </ion-row>
+        <ion-row>
+          <ion-col class="ion-align-self-center">
+            <h1 class="ion-text-center"><strong>Welcome to StitchPix</strong></h1>
+          </ion-col>
+        </ion-row>
+        <ion-row class="ion-justify-content-center">
+          <ion-col class="ion-align-self-center">
+            <h4 class="ion-text-center">Stich Pix helps you find fashion that looks good on your body</h4>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col>
+            <ion-button (click)="googleLogin()" expand="block" color="secondary">
+              Log In With Google
+            </ion-button>
+          </ion-col>
+        </ion-row>
+        <ion-row class="ion-justify-content-center">
+          <ion-col class="ion-align-self-center">
+            <form [formGroup]="credentialForm">
+              <ion-item>
+                <ion-input placeholder="Email address" formControlName="email" autofocus="true" clearInput="true">
+                </ion-input>
+              </ion-item>
+
+              <div *ngIf="(email.dirty || email.touched) && email.errors" class="errors">
+                <span *ngIf="email.errors?.required">Email is required</span>
+                <span *ngIf="email.errors?.email">Email is invalid</span>
+              </div>
+
+              <ion-item>
+                <ion-input placeholder="password" type="password" formControlName="password" clearInput="true">
+                </ion-input>
+              </ion-item>
+
+              <div *ngIf="(password.dirty || password.touched) && password.errors" class="errors">
+                <span *ngIf="password.errors?.required">Password is required</span>
+                <span *ngIf="password.errors?.minLength">Password must be at least 6 characters</span>
+              </div>
+
+              <ion-button (click)='signIn()' expand="full" size="small">Sign In</ion-button>
+            </form>
+          </ion-col>
+        </ion-row>
+        <ion-text class="ion-text-center">Don't have an account? <a routerLink="/signup">Sign up</a></ion-text>
+      </div>
   </ion-grid>
 </ion-content>
